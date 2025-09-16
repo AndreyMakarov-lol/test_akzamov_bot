@@ -5,9 +5,8 @@ from aiogram.types import FSInputFile
 from aiogram.filters.command import Command
 from test_random_akzamov.test_main_random_akzamov import random_name
 
-
+#Преобразуем путь к файлу в вид который нравиться библиотеке
 def random_img_path():
-
     all_file_path = FSInputFile(random_name())
     return all_file_path
 
