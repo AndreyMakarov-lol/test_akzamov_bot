@@ -1,8 +1,16 @@
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types
+from aiogram.types import FSInputFile
 from aiogram.filters.command import Command
 from test_random_akzamov.test_main_random_akzamov import random_name
+
+
+def random_img_path():
+
+    all_file_path = FSInputFile(random_name())
+    return all_file_path
+
 
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
@@ -19,8 +27,8 @@ async def cmd_start(message: types.Message):
 # Хэндлер на команду /random
 #Возвращает имя рандомного файла из папки
 @dp.message(Command("random"))
-async def cmd_start(message: types.Message):
-    await message.answer(random_name())
+async def cmd_random(message: types.Message):
+    await message.answer_photo(random_img_path())
 
 # Запуск процесса поллинга новых апдейтов
 async def main():
