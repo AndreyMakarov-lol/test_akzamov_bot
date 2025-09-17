@@ -7,7 +7,7 @@ from test_random_akzamov.test_main_random_akzamov import random_name
 
 #Преобразуем путь к файлу в вид который нравиться библиотеке
 def random_img_path():
-    all_file_path = FSInputFile(random_name())
+    all_file_path = FSInputFile(random_name('test_dir'))
     return all_file_path
 
 
