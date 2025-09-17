@@ -1,6 +1,6 @@
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, types, F
 from aiogram.types import FSInputFile
 from aiogram.filters.command import Command
 from test_random_akzamov.test_main_random_akzamov import random_name
@@ -21,13 +21,29 @@ dp = Dispatcher()
 # Хэндлер на команду /start
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    await message.answer("Hello!")
+    kb = [
+        [types.KeyboardButton(text="Кекный Акзамов")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, input_field_placeholder="Нажми и получишь Акзамова")
+    await message.answer("Привет! Хочешь кекного акзвмова?", reply_markup=keyboard )
 
-# Хэндлер на команду /random
-#Возвращает имя рандомного файла из папки
-@dp.message(Command("random"))
-async def cmd_random(message: types.Message):
+
+
+@dp.message(F.text.lower() == "кекный акзамов")
+async def with_puree(message: types.Message):
     await message.answer_photo(random_img_path())
+
+
+
+
+
+
+
+# # Хэндлер на команду /random
+# #Возвращает имя рандомного файла из папки
+# @dp.message(Command("random"))
+# async def cmd_random(message: types.Message):
+#     await message.answer_photo(random_img_path())
 
 # Запуск процесса поллинга новых апдейтов
 async def main():
