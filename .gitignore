@@ -24,3 +24,4 @@ TestResults.xml
 *.venv/
 .idea
 .__pycache__/
+.DC_Store
