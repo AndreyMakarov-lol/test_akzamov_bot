@@ -22,5 +22,5 @@ rad.json
 TestResults.xml
 #Venv
 *.venv/
-
+.idea
 .__pycache__/
