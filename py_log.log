@@ -1,0 +1,5 @@
+2025-09-20 17:52:03,031 INFO Start polling
+2025-09-20 17:52:03,491 INFO Run polling for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
+2025-09-20 17:52:13,310 WARNING Received SIGINT signal
+2025-09-20 17:52:13,310 INFO Polling stopped for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
+2025-09-20 17:52:13,310 INFO Polling stopped

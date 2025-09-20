@@ -12,6 +12,8 @@ def random_img_path():
 
 
 # Включаем логирование, чтобы не пропустить важные сообщения
+logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w",
+                    format="%(asctime)s %(levelname)s %(message)s")
 logging.basicConfig(level=logging.INFO)
 # Объект бота
 bot = Bot(token="7580307885:AAFFWdR9Y-LzzbhbZP9NIen2D5tY048mN7E")
