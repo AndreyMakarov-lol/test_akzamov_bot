@@ -25,3 +25,4 @@ TestResults.xml
 .idea
 .__pycache__/
 .DC_Store
+*.env

@@ -1,5 +1,9 @@
-2025-09-20 17:52:03,031 INFO Start polling
-2025-09-20 17:52:03,491 INFO Run polling for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
-2025-09-20 17:52:13,310 WARNING Received SIGINT signal
-2025-09-20 17:52:13,310 INFO Polling stopped for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
-2025-09-20 17:52:13,310 INFO Polling stopped
+2025-09-27 16:58:39,035 INFO Start polling
+2025-09-27 16:58:39,407 INFO Run polling for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
+2025-09-27 16:58:40,040 INFO Update id=227478347 is handled. Duration 504 ms by bot id=7580307885
+2025-09-27 16:58:48,883 INFO Update id=227478348 is handled. Duration 337 ms by bot id=7580307885
+2025-09-27 16:58:50,579 INFO Update id=227478349 is handled. Duration 157 ms by bot id=7580307885
+2025-09-27 16:58:59,863 INFO Polling stopped
+2025-09-27 16:58:59,865 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-27 16:58:59,866 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7580307885)
+2025-09-27 16:59:00,131 INFO Polling stopped for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'

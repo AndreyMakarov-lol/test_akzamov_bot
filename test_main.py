@@ -1,9 +1,12 @@
 import asyncio
+import os
 import logging
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.types import FSInputFile
+from decouple import config
 from aiogram.filters.command import Command
 from test_random_akzamov.test_main_random_akzamov import random_name
+
 
 #Преобразуем путь к файлу в вид который нравиться библиотеке
 def random_img_path():
@@ -16,11 +19,13 @@ logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w",
                     format="%(asctime)s %(levelname)s %(message)s")
 logging.basicConfig(level=logging.INFO)
 # Объект бота
-bot = Bot(token="7580307885:AAFFWdR9Y-LzzbhbZP9NIen2D5tY048mN7E")
-# Диспетчер
+
+bot = Bot(token=config('API_KEY'))
+# Диспетчерgit restore 
 dp = Dispatcher()
 
 # Хэндлер на команду /start
+'''Добавил кнопку, при нажатии которой выдается фотка'''
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     kb = [
@@ -30,16 +35,10 @@ async def cmd_start(message: types.Message):
     await message.answer("Привет! Хочешь кекного акзвмова?", reply_markup=keyboard )
 
 
-
+'''Реакция на нажатие обычной кнопки'''
 @dp.message(F.text.lower() == "кекный акзамов")
 async def with_puree(message: types.Message):
     await message.answer_photo(random_img_path())
-
-
-
-
-
-
 
 # # Хэндлер на команду /random
 # #Возвращает имя рандомного файла из папки
