@@ -31,7 +31,9 @@ async def cmd_start(message: types.Message):
     kb = [
         [types.KeyboardButton(text="Кекный Акзамов")]
     ]
-    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, input_field_placeholder="Нажми и получишь Акзамова")
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb,
+        resize_keyboard=True,
+        input_field_placeholder="Нажми и получишь Акзамова")
     await message.answer("Привет! Хочешь кекного акзвмова?", reply_markup=keyboard )
 
 
