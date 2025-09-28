@@ -9,7 +9,7 @@ def random_name(name_dir):
 
 #Выдергиваем и печатаем случайное имя файла
     name = random.choice(names)
-    file_path = f'./test_random_akzamov/test_dir/{name}'
+    file_path = f'./test_random_akzamov/{name_dir}/{name}'
     return file_path
 
 

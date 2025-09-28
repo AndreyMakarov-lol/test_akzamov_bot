@@ -1,8 +1,9 @@
-2025-09-28 16:21:59,027 INFO Start polling
-2025-09-28 16:21:59,384 INFO Run polling for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
-2025-09-28 16:22:03,142 INFO Update id=227478409 is handled. Duration 454 ms by bot id=7580307885
-2025-09-28 16:22:24,782 INFO Update id=227478410 is handled. Duration 124 ms by bot id=7580307885
-2025-09-28 16:22:26,552 INFO Update id=227478411 is handled. Duration 311 ms by bot id=7580307885
-2025-09-28 16:22:30,007 WARNING Received SIGINT signal
-2025-09-28 16:22:30,007 INFO Polling stopped for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
-2025-09-28 16:22:30,007 INFO Polling stopped
+2025-09-28 16:40:08,038 INFO Start polling
+2025-09-28 16:40:08,329 INFO Run polling for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
+2025-09-28 16:40:11,896 INFO Update id=227478438 is handled. Duration 604 ms by bot id=7580307885
+2025-09-28 16:40:13,612 INFO Update id=227478439 is handled. Duration 479 ms by bot id=7580307885
+2025-09-28 16:40:15,516 INFO Update id=227478440 is handled. Duration 143 ms by bot id=7580307885
+2025-09-28 16:40:16,997 INFO Update id=227478441 is handled. Duration 242 ms by bot id=7580307885
+2025-09-28 16:40:21,346 WARNING Received SIGINT signal
+2025-09-28 16:40:21,347 INFO Polling stopped for bot @akzamov_kek_bot id=7580307885 - 'akzamov_kek_bot'
+2025-09-28 16:40:21,347 INFO Polling stopped

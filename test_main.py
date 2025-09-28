@@ -9,8 +9,8 @@ from test_random_akzamov.test_main_random_akzamov import random_name
 
 
 #Преобразуем путь к файлу в вид который нравиться библиотеке
-def random_img_path():
-    all_file_path = FSInputFile(random_name('test_dir'))
+def random_img_path(name_dir):
+    all_file_path = FSInputFile(random_name(name_dir))
     return all_file_path
 
 
@@ -29,7 +29,10 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     kb = [
-        [types.KeyboardButton(text="Кекный Акзамов")]
+        [
+            types.KeyboardButton(text="Кекный Акзамов"),
+            types.KeyboardButton(text="Грустный Акзамов")
+         ]
     ]
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb,
         resize_keyboard=True,
@@ -40,7 +43,11 @@ async def cmd_start(message: types.Message):
 '''Реакция на нажатие обычной кнопки'''
 @dp.message(F.text.lower() == "кекный акзамов")
 async def with_puree(message: types.Message):
-    await message.answer_photo(random_img_path())
+    await message.answer_photo(random_img_path('test_dir'))
+
+@dp.message(F.text.lower() == "грустный акзамов")
+async def with_puree(message: types.Message):
+    await message.answer_photo(random_img_path('sad_akz'))
 
 # # Хэндлер на команду /random
 # #Возвращает имя рандомного файла из папки
